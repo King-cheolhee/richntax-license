@@ -64,10 +64,32 @@
                  cursor: pointer; flex-shrink: 0; font-size: 14px; color: var(--gray); }
   .htx-modal-body { padding: 4px 18px 18px; overflow-y: auto; font-size: 13.5px; color: #374151; line-height: 1.75; white-space: pre-wrap; }
   .htx-modal-sub { font-size: 11.5px; color: var(--blue); font-weight: 700; margin-bottom: 8px; }
+  /* ── 기능 탭 + 화면 전환 ── */
+  body { margin: 0; font-family: "imweb Sans","Apple SD Gothic Neo","Malgun Gothic","Nanum Gothic","Noto Sans",sans-serif; }
+  .htx-tabs { display: flex; gap: 6px; max-width: 640px; margin: 0 auto; padding: 14px 16px 0; }
+  .htx-tab { flex: 1; padding: 12px 8px; border: 1px solid var(--line); border-bottom: none;
+             border-radius: 10px 10px 0 0; background: #F9FAFB; color: var(--gray);
+             font-size: 13.5px; font-weight: 700; cursor: pointer; line-height: 1.35; }
+  .htx-tab:hover { background: #EFF6FF; color: var(--blue); }
+  .htx-tab.active { background: #fff; color: var(--blue); box-shadow: 0 -2px 0 var(--blue) inset; }
+  .htx-screen { display: none; }
+  .htx-screen.active { display: block; }
+  /* ── 준비 중(사업자등록) ── */
+  .htx-coming { max-width: 640px; margin: 0 auto; padding: 48px 20px; text-align: center; color: var(--ink); }
+  .htx-coming .ico { font-size: 42px; }
+  .htx-coming h3 { font-size: 18px; font-weight: 800; margin: 16px 0 8px; }
+  .htx-coming p { font-size: 13.5px; color: var(--gray); line-height: 1.75; margin: 0; }
 </style>
 </head>
 <body>
-<div class="htx">
+<!-- 상단 기능 탭 -->
+<div class="htx-tabs">
+  <button class="htx-tab active" data-screen="license" type="button">🔍 인허가 서류·업종 조회</button>
+  <button class="htx-tab" data-screen="register" type="button">📝 셀프 사업자등록하기</button>
+</div>
+
+<!-- 화면 1: 인허가 서류·업종 조회 (기존 위젯 그대로) -->
+<div class="htx htx-screen active" id="scrLicense">
   <div class="htx-title">🔍 업종별 인허가 서류 안내</div>
   <div class="htx-desc">사업하실 업종을 검색하면, 사업자등록 시 필요한 <b>인·허가 서류</b>(근거법령·제출서류·접수기관)를 알려드립니다.</div>
   <div class="htx-bar">
@@ -92,6 +114,15 @@
       <button class="htx-modal-x" id="htxModalX" aria-label="닫기">✕</button>
     </div>
     <div class="htx-modal-body"><div class="htx-modal-sub">📖 적용기준 · 이 업종이 어떤 일인지</div><div id="htxModalBody"></div></div>
+  </div>
+</div>
+
+<!-- 화면 2: 셀프 사업자등록하기 (준비 중 — Task B에서 구현) -->
+<div class="htx-screen" id="scrRegister">
+  <div class="htx-coming">
+    <div class="ico">🚧</div>
+    <h3>셀프 사업자등록하기 — 준비 중입니다</h3>
+    <p>정보를 입력하시면 <b>사업자등록 신청서 작성</b>을 도와드리는<br>기능을 준비하고 있어요. 곧 제공됩니다.</p>
   </div>
 </div>
 
@@ -278,6 +309,18 @@
   // 메타(수집일자)
   if(META.collectedAt) document.getElementById('htxMeta').textContent =
     ' · 기준일 ' + META.collectedAt + ' (업종 ' + META.codes + '개, 인허가 대상 ' + META.licensed + '개)';
+
+  // ── 기능 탭 전환 ──
+  function showScreen(name){
+    var tabs = document.querySelectorAll('.htx-tab');
+    for(var i=0;i<tabs.length;i++){ tabs[i].classList.toggle('active', tabs[i].getAttribute('data-screen')===name); }
+    document.getElementById('scrLicense').classList.toggle('active', name==='license');
+    document.getElementById('scrRegister').classList.toggle('active', name==='register');
+  }
+  var tabBtns = document.querySelectorAll('.htx-tab');
+  for(var ti=0; ti<tabBtns.length; ti++){
+    tabBtns[ti].addEventListener('click', function(){ showScreen(this.getAttribute('data-screen')); });
+  }
 })();
 </script>
 </body>
