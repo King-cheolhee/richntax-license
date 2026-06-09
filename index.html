@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>업종별 인허가 서류 안내</title>
+<style>
+  :root { --blue:#2563EB; --blue-d:#1D4ED8; --ink:#1F2937; --gray:#6B7280; --line:#E5E7EB; }
+  * { box-sizing: border-box; }
+  .htx { font-family: "imweb Sans", "Apple SD Gothic Neo", "Malgun Gothic", "Nanum Gothic", "Noto Sans", sans-serif;
+         max-width: 640px; margin: 0 auto; padding: 16px; color: var(--ink); }
+  .htx-title { font-size: 20px; font-weight: 800; }
+  .htx-desc { font-size: 13.5px; color: var(--gray); margin: 6px 0 14px; line-height: 1.5; }
+  .htx-bar { display: flex; gap: 8px; }
+  .htx-bar input { flex: 1; padding: 13px 14px; border: 1px solid #D1D5DB; border-radius: 10px;
+                   font-size: 15px; outline: none; }
+  .htx-bar input:focus { border-color: var(--blue); }
+  .htx-bar button { padding: 0 20px; border: none; border-radius: 10px; background: var(--blue);
+                    color: #fff; font-size: 15px; font-weight: 700; cursor: pointer; flex-shrink: 0; }
+  .htx-bar button:hover { background: var(--blue-d); }
+  .htx-hint { font-size: 11.5px; color: var(--gray); margin: 7px 2px 0; }
+  .htx-results { margin-top: 14px; }
+  .htx-empty { text-align: center; color: #9CA3AF; font-size: 13.5px; padding: 30px 10px; line-height: 1.7; }
+  .htx-group { border: 1px solid var(--line); border-radius: 12px; margin-bottom: 10px; overflow: hidden; }
+  .htx-ghead { width: 100%; display: flex; align-items: center; gap: 10px; padding: 13px 15px;
+               background: #F9FAFB; border: none; cursor: pointer; text-align: left; }
+  .htx-ghead:hover { background: #EFF6FF; }
+  .htx-gname { font-size: 14.5px; font-weight: 700; }
+  .htx-gcount { font-size: 11.5px; font-weight: 600; color: var(--blue); margin-left: 6px; }
+  .htx-gex { font-size: 11.5px; color: var(--gray); margin-top: 3px; }
+  .htx-arrow { margin-left: auto; color: #9CA3AF; font-size: 12px; flex-shrink: 0; }
+  .htx-item { border-top: 1px solid #F3F4F6; background: #fff; }
+  .htx-irow { width: 100%; display: flex; align-items: center; gap: 8px; padding: 12px 15px;
+              border: none; background: none; cursor: pointer; text-align: left; }
+  .htx-irow:hover { background: #F8FAFF; }
+  .htx-code { color: var(--blue); font-family: ui-monospace, monospace; font-size: 12px; flex-shrink: 0; }
+  .htx-iname { font-size: 13.5px; font-weight: 600; }
+  .htx-badge { margin-left: auto; font-size: 11px; font-weight: 700; padding: 3px 9px; border-radius: 999px; flex-shrink: 0; }
+  .htx-need { background: #FEF3C7; color: #92400E; }
+  .htx-none { background: #ECFDF5; color: #047857; }
+  .htx-detail { padding: 4px 15px 14px; background: #FBFCFE; border-top: 1px dashed #E5E7EB; }
+  .htx-lic { padding: 10px 12px; border: 1px solid #EEF2FF; border-radius: 9px; margin-top: 8px; background: #fff; }
+  .htx-lic-head { font-size: 13px; font-weight: 700; }
+  .htx-cl { display: inline-block; font-size: 11px; font-weight: 800; color: #fff; background: var(--blue);
+            padding: 2px 8px; border-radius: 6px; margin-right: 6px; }
+  .htx-lic-grid { font-size: 12.5px; color: #374151; margin-top: 6px; line-height: 1.65; }
+  .htx-lic-grid b { color: #111827; font-weight: 700; }
+  .htx-none-msg { font-size: 12.5px; color: #047857; padding: 8px 2px; }
+  .htx-more { width: 100%; padding: 11px; border: 1px dashed #D1D5DB; border-radius: 9px; background: #fff;
+              color: var(--blue); font-size: 13px; font-weight: 600; cursor: pointer; }
+  .htx-foot { font-size: 11.5px; color: var(--gray); margin-top: 16px; padding-top: 12px;
+              border-top: 1px solid var(--line); line-height: 1.6; }
+  /* 돋보기 버튼 + 적용기준 모달 */
+  .htx-desc-btn { flex-shrink: 0; width: 27px; height: 27px; border: 1px solid var(--line); border-radius: 7px;
+                  background: #fff; cursor: pointer; font-size: 13px; line-height: 1; padding: 0; }
+  .htx-desc-btn:hover { background: #EFF6FF; border-color: var(--blue); }
+  .htx-modal-bg { position: fixed; inset: 0; z-index: 2147483000; background: rgba(15,23,42,0.5);
+                  display: none; align-items: center; justify-content: center; padding: 16px; }
+  .htx-modal { background: #fff; border-radius: 14px; max-width: 520px; width: 100%; max-height: 80vh;
+               display: flex; flex-direction: column; overflow: hidden; box-shadow: 0 20px 60px rgba(0,0,0,0.3); }
+  .htx-modal-h { display: flex; align-items: flex-start; justify-content: space-between; gap: 10px; padding: 16px 18px 10px; }
+  .htx-modal-title { font-size: 15px; font-weight: 800; line-height: 1.4; }
+  .htx-modal-x { width: 30px; height: 30px; border: 1px solid var(--line); border-radius: 8px; background: #fff;
+                 cursor: pointer; flex-shrink: 0; font-size: 14px; color: var(--gray); }
+  .htx-modal-body { padding: 4px 18px 18px; overflow-y: auto; font-size: 13.5px; color: #374151; line-height: 1.75; white-space: pre-wrap; }
+  .htx-modal-sub { font-size: 11.5px; color: var(--blue); font-weight: 700; margin-bottom: 8px; }
+</style>
+</head>
+<body>
+<div class="htx">
+  <div class="htx-title">🔍 업종별 인허가 서류 안내</div>
+  <div class="htx-desc">사업하실 업종을 검색하면, 사업자등록 시 필요한 <b>인·허가 서류</b>(근거법령·제출서류·접수기관)를 알려드립니다.</div>
+  <div class="htx-bar">
+    <input id="htxQ" placeholder="예: 음식점, 카페, 미용실, 학원, 쇼핑몰" autocomplete="off">
+    <button id="htxBtn">검색</button>
+  </div>
+  <div class="htx-hint">큰 키워드로 검색하면 관련 업종을 묶어 보여드립니다. 초성(예: ㅇㅅㅈ)·업종코드(숫자)도 가능합니다.</div>
+  <div id="htxResults" class="htx-results">
+    <div class="htx-empty">찾으시는 업종의 키워드를 입력하고 <b>검색</b>을 눌러주세요.</div>
+  </div>
+  <div class="htx-foot">
+    ⚠ 본 정보는 <b>참고용</b>입니다. 인허가 요건·제출서류·접수기관은 법령 개정 및 지자체 조례에 따라 바뀔 수 있으므로,
+    실제 사업자등록·영업 개시 전 반드시 <b>관할기관(시·군·구청 등)</b>에 최신 요건을 확인하시기 바랍니다.
+    <span id="htxMeta"></span>
+  </div>
+</div>
+
+<div class="htx-modal-bg" id="htxModalBg">
+  <div class="htx-modal">
+    <div class="htx-modal-h">
+      <div class="htx-modal-title" id="htxModalTitle"></div>
+      <button class="htx-modal-x" id="htxModalX" aria-label="닫기">✕</button>
+    </div>
+    <div class="htx-modal-body"><div class="htx-modal-sub">📖 적용기준 · 이 업종이 어떤 일인지</div><div id="htxModalBody"></div></div>
+  </div>
+</div>
+
+<script src="data.js"></script>
+<script>
+(function () {
+  "use strict";
+  var DATA = window.HOMETAX_DATA || [];
+  var META = window.HOMETAX_META || {};
+
+  // ── 동의어/대표어 사전 (지사제 industry-synonyms 와 동일) ──
+  var SYN = {
+    '음식점':['음식점','식당'],'식당':['음식점','식당'],'외식':['음식점','식당'],'맛집':['음식점','식당'],
+    '카페':['커피','카페','비알코올','다방'],'커피숍':['커피','비알코올'],'커피':['커피','비알코올'],
+    '치킨':['치킨','간이 음식'],'분식':['분식','김밥'],'주점':['주점','호프','간이주점'],'술집':['주점','호프'],'호프':['주점','호프'],
+    '베이커리':['제과','빵'],'빵집':['제과','빵'],'제과':['제과','빵'],'햄버거':['햄버거','간이 음식','피자'],
+    '패스트푸드':['햄버거','피자','간이 음식'],'배달음식':['배달','음식점'],
+    '쇼핑몰':['전자상거래','통신판매'],'온라인쇼핑':['전자상거래','통신판매'],'인터넷쇼핑':['전자상거래','통신판매'],
+    '온라인판매':['전자상거래','통신판매'],'통신판매':['전자상거래','통신판매'],'이커머스':['전자상거래','통신판매'],
+    '스마트스토어':['전자상거래','통신판매'],'sns마켓':['전자상거래','통신판매'],'옷가게':['의류','의복'],'의류매장':['의류','의복'],
+    '편의점':['편의점'],'마트':['슈퍼마켓','종합 소매','마트'],'슈퍼':['슈퍼마켓','종합 소매'],'화장품':['화장품'],
+    '꽃집':['화초','꽃','화훼'],'문구점':['문구','문방구'],
+    '미용실':['미용','두발'],'헤어샵':['미용','두발'],'네일':['네일','미용'],'피부관리':['피부','미용'],'에스테틱':['피부','미용'],
+    '학원':['학원','교습','교육'],'교습소':['학원','교습'],'헬스장':['체력단련','스포츠 시설'],'피트니스':['체력단련','스포츠 시설'],
+    '필라테스':['스포츠 교육','체력단련'],'펜션':['숙박','펜션','민박'],'민박':['숙박','민박'],'게스트하우스':['숙박','민박'],
+    '모텔':['숙박','여관'],'호텔':['숙박','호텔'],'부동산':['부동산','중개'],'공인중개':['부동산','중개'],'세탁소':['세탁'],
+    '사진관':['사진','촬영'],'스튜디오':['사진','촬영'],'인테리어':['인테리어','실내건축','도배'],'청소':['청소'],'동물병원':['수의'],
+    '병원':['의원','병원','의료'],'의원':['의원','병원'],'클리닉':['의원','병원'],'약국':['약국','의약품'],
+    '앱개발':['소프트웨어','응용','프로그래밍'],'소프트웨어':['소프트웨어','응용','시스템'],'프로그램개발':['소프트웨어','프로그래밍'],
+    '웹개발':['소프트웨어','프로그래밍'],'it':['소프트웨어','정보','시스템'],'디자인':['디자인'],'광고':['광고'],'마케팅':['광고','마케팅'],
+    '제조':['제조'],'공장':['제조'],'농사':['농업','재배'],'농업':['농업','재배'],
+    // ── 생활밀착 추가 (창업에서 흔히 쓰는 표현 → 데이터 실제 명칭) ──
+    '노래방':['노래 연습장'],'코인노래방':['노래 연습장'],'독서실':['독서실'],'스터디카페':['독서실'],
+    '골프':['골프장','골프 연습장'],'골프연습장':['골프 연습장'],'스크린골프':['골프 연습장'],
+    '세차장':['세차'],'세차':['세차'],'주유소':['주유소'],'빨래방':['세탁'],'코인빨래방':['세탁'],
+    '애견':['반려','수의'],'애견샵':['반려용동물','반려'],'반려동물':['반려'],'펫샵':['반려'],'동물병원':['수의'],
+    '마사지':['마사지'],'한의원':['한의원'],'치과':['치과'],'요양원':['요양'],'요양병원':['요양병원'],
+    '태권도':['태권도','무술'],'무술':['무술','태권도'],
+    '노무사':['노무사'],'세무사':['세무사'],'세무':['세무사'],'회계사':['공인회계사'],'회계':['회계'],
+    '변호사':['변호사'],'법무사':['법무사'],'번역':['번역'],'통역':['통역'],
+    '반찬':['반찬'],'반찬가게':['반찬'],'떡집':['떡'],'두부':['두부'],'김치':['김치'],
+    '당구장':['당구장'],'당구':['당구장'],'낚시':['낚시'],'안경원':['안경'],'안경점':['안경'],'주류':['주류'],
+    '어린이집':['보육'],'보육':['보육'],'피시방':['컴퓨터 게임방'],'pc방':['컴퓨터 게임방'],'게임방':['컴퓨터 게임방'],
+    '카센터':['자동차 종합 수리','자동차 전문 수리'],'자동차정비':['자동차 종합 수리','자동차 전문 수리'],'정비소':['자동차 종합 수리','자동차 전문 수리'],
+    '정육점':['육류 소매'],'정육':['육류 소매'],'건강식품':['건강 기능식품','건강 보조식품'],'오락실':['오락장']
+  };
+  var TYPO = {'음식정':'음식점','음식짐':'음식점','카패':'카페','소프트웨워':'소프트웨어','소프트웨에':'소프트웨어','미용싱':'미용실','학언':'학원'};
+  var CHO = ['ㄱ','ㄲ','ㄴ','ㄷ','ㄸ','ㄹ','ㅁ','ㅂ','ㅃ','ㅅ','ㅆ','ㅇ','ㅈ','ㅉ','ㅊ','ㅋ','ㅌ','ㅍ','ㅎ'];
+
+  function norm(q){ return (q||'').trim().replace(/\s+/g,' ').toLowerCase(); }
+  function expand(q){
+    var n = norm(q); if(!n) return [];
+    var set = {}; set[n] = 1;
+    var t = TYPO[n]; if(t) set[t] = 1;
+    [n, t].forEach(function(k){ if(k && SYN[k]) SYN[k].forEach(function(s){ set[s] = 1; }); });
+    var ns = n.replace(/\s+/g,''); if(ns && ns !== n) set[ns] = 1;
+    return Object.keys(set);
+  }
+  function toCho(s){
+    var o = ''; for(var i=0;i<(s||'').length;i++){ var c = s.charCodeAt(i);
+      o += (c>=0xac00 && c<=0xd7a3) ? CHO[Math.floor((c-0xac00)/588)] : s[i]; } return o;
+  }
+  function isCho(q){ var t = norm(q).replace(/\s+/g,''); if(t.length<2) return false;
+    for(var i=0;i<t.length;i++){ if(CHO.indexOf(t[i])<0) return false; } return true; }
+
+  function search(q){
+    var n = norm(q); if(!n) return [];
+    if(isCho(q)){ var cho = n.replace(/\s+/g,'');
+      return DATA.filter(function(r){ return toCho(r.cs||'').indexOf(cho)>=0 || toCho(r.cm||'').indexOf(cho)>=0; }).slice(0,800); }
+    if(/^\d+$/.test(n)) return DATA.filter(function(r){ return r.code.indexOf(n)===0; }).slice(0,800);
+    var terms = expand(q);
+    // 데이터 명칭에 띄어쓰기가 있어도("한식 일반 음식점업") 검색어("일반음식점")가 잡히도록
+    // 원문 매칭 + 공백 제거 매칭을 함께 본다.
+    var termsNS = [];
+    for(var k=0;k<terms.length;k++){ var t = terms[k].replace(/\s+/g,''); if(t) termsNS.push(t); }
+    return DATA.filter(function(r){
+      var hay = ((r.cs||'')+' '+(r.cd||'')+' '+(r.cm||'')+' '+(r.bt||'')+' '+(r.desc||'')).toLowerCase();
+      for(var i=0;i<terms.length;i++){ if(hay.indexOf(terms[i])>=0) return true; }
+      var hayNS = hay.replace(/\s+/g,'');
+      for(var j=0;j<termsNS.length;j++){ if(hayNS.indexOf(termsNS[j])>=0) return true; }
+      return false;
+    }).slice(0,800);
+  }
+
+  function groupByMedium(rows, q){
+    var n = norm(q), map = {};
+    rows.forEach(function(r){ var k = r.cm || '(기타)'; (map[k] = map[k] || []).push(r); });
+    var groups = Object.keys(map).map(function(med){
+      var items = map[med].slice().sort(function(a,b){ return a.code < b.code ? -1 : 1; });
+      var ex = []; for(var i=0;i<items.length && ex.length<3;i++){ if(items[i].cs && ex.indexOf(items[i].cs)<0) ex.push(items[i].cs); }
+      var score = items.length, bt = (items[0].bt||'').toLowerCase(), md = med.toLowerCase();
+      if(md===n || bt===n) score += 1000; else if(md.indexOf(n)>=0 || bt.indexOf(n)>=0) score += 300;
+      var exact = items.some(function(it){ return (it.cs||'').toLowerCase()===n; });
+      if(exact) score += 500; else if(items.some(function(it){ return (it.cs||'').toLowerCase().indexOf(n)>=0; })) score += 200;
+      return { cm: med, bt: items[0].bt||'', ex: ex, items: items, count: items.length, score: score };
+    });
+    groups.sort(function(a,b){ return b.score - a.score || b.count - a.count; });
+    return groups;
+  }
+
+  // ── 렌더링 ──
+  function esc(s){ return (s==null?'':String(s)).replace(/[&<>"]/g, function(c){ return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]; }); }
+  var GROUP_STEP = 8;
+  var state = { groups: [], visible: GROUP_STEP, openG: {}, openI: {} };
+
+  function licBlock(lic){
+    if(!lic || !lic.length) return '<div class="htx-none-msg">✓ 이 업종은 별도의 인·허가가 필요 없습니다. (일반 사업자등록만으로 가능)</div>';
+    var h = '';
+    lic.forEach(function(l){
+      h += '<div class="htx-lic"><div class="htx-lic-head"><span class="htx-cl">'+esc(l.cl)+'</span>'+esc(l.applc)+'</div>'
+        + '<div class="htx-lic-grid"><b>근거법령</b> '+esc(l.law||'-')+'<br><b>제출서류</b> '+esc(l.doc||'-')
+        + ' &nbsp;·&nbsp; <b>접수기관</b> '+esc(l.org||'-')
+        + (l.remark ? '<br><b>비고</b> '+esc(l.remark) : '')+'</div></div>';
+    });
+    return '<div>'+h+'</div>';
+  }
+
+  function render(){
+    var box = document.getElementById('htxResults');
+    var groups = state.groups;
+    if(!groups.length){ box.innerHTML = '<div class="htx-empty">검색 결과가 없습니다.<br>다른 키워드로 검색해 보세요.</div>'; return; }
+    var html = '';
+    groups.slice(0, state.visible).forEach(function(g){
+      var go = !!state.openG[g.cm];
+      html += '<div class="htx-group"><button class="htx-ghead" data-g="'+esc(g.cm)+'">'
+        + '<span style="flex:1"><span class="htx-gname">'+esc(g.cm)+'<span class="htx-gcount">'+g.count+'개</span></span>'
+        + (g.ex.length ? '<div class="htx-gex">예: '+esc(g.ex.join(' · '))+'</div>' : '')+'</span>'
+        + '<span class="htx-arrow">'+(go?'▲':'▼')+'</span></button>';
+      if(go){
+        g.items.forEach(function(it){
+          var io = !!state.openI[it.code], has = it.lic && it.lic.length;
+          html += '<div class="htx-item"><div class="htx-irow" data-i="'+esc(it.code)+'" role="button" tabindex="0">'
+            + '<span class="htx-code">['+esc(it.code)+']</span>'
+            + '<span class="htx-iname">'+esc(it.cs)+'</span>'
+            + '<button class="htx-desc-btn" data-desc="'+esc(it.code)+'" title="이 업종이 어떤 일인지 보기" aria-label="적용기준 보기">🔍</button>'
+            + '<span class="htx-badge '+(has?'htx-need':'htx-none')+'">'+(has?'🔖 인허가 필요':'✓ 불필요')+'</span></div>';
+          if(io) html += '<div class="htx-detail">'+licBlock(it.lic)+'</div>';
+          html += '</div>';
+        });
+      }
+      html += '</div>';
+    });
+    if(groups.length > state.visible)
+      html += '<button class="htx-more" id="htxMore">+ 더 보기 ('+(groups.length-state.visible)+'개 그룹 더)</button>';
+    box.innerHTML = html;
+  }
+
+  function doSearch(){
+    var q = document.getElementById('htxQ').value.trim();
+    if(q.length < 2){ document.getElementById('htxResults').innerHTML = '<div class="htx-empty">2글자 이상 입력해주세요. (예: 음식점, 카페)</div>'; return; }
+    var rows = search(q);
+    var top = groupByMedium(rows, q);
+    state.groups = top; state.visible = GROUP_STEP; state.openG = {}; state.openI = {};
+    if(top.length && top[0].score >= 1000) state.openG[top[0].cm] = true; // 강한 매칭 자동 펼침
+    render();
+  }
+
+  // 적용기준 돋보기 모달
+  var DMAP = {};
+  DATA.forEach(function(r){ DMAP[r.code] = r; });
+  function openDesc(code){
+    var r = DMAP[code]; if(!r) return;
+    document.getElementById('htxModalTitle').textContent = '[' + r.code + '] ' + (r.cs || '');
+    document.getElementById('htxModalBody').textContent = (r.desc && String(r.desc).trim()) ? r.desc : '적용기준 정보가 없습니다.';
+    document.getElementById('htxModalBg').style.display = 'flex';
+  }
+  function closeDesc(){ document.getElementById('htxModalBg').style.display = 'none'; }
+  document.getElementById('htxModalBg').addEventListener('click', function(e){ if(e.target === this) closeDesc(); });
+  document.getElementById('htxModalX').addEventListener('click', closeDesc);
+  document.addEventListener('keydown', function(e){ if(e.key === 'Escape') closeDesc(); });
+
+  // 이벤트 위임 (결과 영역)
+  document.getElementById('htxResults').addEventListener('click', function(e){
+    var db = e.target.closest('.htx-desc-btn');
+    if(db){ e.stopPropagation(); openDesc(db.getAttribute('data-desc')); return; }
+    var gh = e.target.closest('.htx-ghead'); var ir = e.target.closest('.htx-irow'); var mo = e.target.closest('#htxMore');
+    if(gh){ var g = gh.getAttribute('data-g'); state.openG[g] = !state.openG[g]; render(); }
+    else if(ir){ var i = ir.getAttribute('data-i'); state.openI[i] = !state.openI[i]; render(); }
+    else if(mo){ state.visible += GROUP_STEP; render(); }
+  });
+  document.getElementById('htxBtn').addEventListener('click', doSearch);
+  document.getElementById('htxQ').addEventListener('keydown', function(e){ if(e.key === 'Enter') doSearch(); });
+
+  // 메타(수집일자)
+  if(META.collectedAt) document.getElementById('htxMeta').textContent =
+    ' · 기준일 ' + META.collectedAt + ' (업종 ' + META.codes + '개, 인허가 대상 ' + META.licensed + '개)';
+})();
+</script>
+</body>
+</html>
