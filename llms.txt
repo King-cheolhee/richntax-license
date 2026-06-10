@@ -1,0 +1,90 @@
+# 세무법인 리치앤택스 — 업종별 사업자등록 인허가 서류 안내
+
+> 국세청 홈택스 기준, 전국 1,541개 업종의 사업자등록 시 필요한 인·허가 서류·근거법령·접수기관 정보를 업종 분류별로 정리한 안내 사이트입니다. 기준일 2026-06-09. 제공: 세무법인 리치앤택스(https://www.richntax.com).
+
+## 핵심 페이지
+- [업종별 인허가 서류 허브](https://biz.richntax.com/guide/): 78개 업종 분류 전체 목록
+- [업종 검색 도구](https://biz.richntax.com/): 업종명·키워드로 인허가 서류 검색
+
+## 업종 분류별 안내 (전체 78개)
+- [도매 및 상품 중개업](https://biz.richntax.com/guide/%EB%8F%84%EB%A7%A4-%EB%B0%8F-%EC%83%81%ED%92%88-%EC%A4%91%EA%B0%9C%EC%97%85.html): 177개 업종 중 33개 인허가 대상
+- [소매업: 자동차 제외](https://biz.richntax.com/guide/%EC%86%8C%EB%A7%A4%EC%97%85-%EC%9E%90%EB%8F%99%EC%B0%A8-%EC%A0%9C%EC%99%B8.html): 138개 업종 중 39개 인허가 대상
+- [식료품 제조업](https://biz.richntax.com/guide/%EC%8B%9D%EB%A3%8C%ED%92%88-%EC%A0%9C%EC%A1%B0%EC%97%85.html): 53개 업종 중 47개 인허가 대상
+- [기타 기계 및 장비 제조업](https://biz.richntax.com/guide/%EA%B8%B0%ED%83%80-%EA%B8%B0%EA%B3%84-%EB%B0%8F-%EC%9E%A5%EB%B9%84-%EC%A0%9C%EC%A1%B0%EC%97%85.html): 46개 업종 중 6개 인허가 대상
+- [화학 물질 및 화학제품 제조업: 의약품 제외](https://biz.richntax.com/guide/%ED%99%94%ED%95%99-%EB%AC%BC%EC%A7%88-%EB%B0%8F-%ED%99%94%ED%95%99%EC%A0%9C%ED%92%88-%EC%A0%9C%EC%A1%B0%EC%97%85-%EC%9D%98%EC%95%BD%ED%92%88-%EC%A0%9C%EC%99%B8.html): 39개 업종 중 17개 인허가 대상
+- [비금속 광물제품 제조업](https://biz.richntax.com/guide/%EB%B9%84%EA%B8%88%EC%86%8D-%EA%B4%91%EB%AC%BC%EC%A0%9C%ED%92%88-%EC%A0%9C%EC%A1%B0%EC%97%85.html): 39개 업종 중 5개 인허가 대상
+- [금속 가공제품 제조업: 기계 및 가구 제외](https://biz.richntax.com/guide/%EA%B8%88%EC%86%8D-%EA%B0%80%EA%B3%B5%EC%A0%9C%ED%92%88-%EC%A0%9C%EC%A1%B0%EC%97%85-%EA%B8%B0%EA%B3%84-%EB%B0%8F-%EA%B0%80%EA%B5%AC-%EC%A0%9C%EC%99%B8.html): 39개 업종 중 13개 인허가 대상
+- [스포츠 및 오락관련 서비스업](https://biz.richntax.com/guide/%EC%8A%A4%ED%8F%AC%EC%B8%A0-%EB%B0%8F-%EC%98%A4%EB%9D%BD%EA%B4%80%EB%A0%A8-%EC%84%9C%EB%B9%84%EC%8A%A4%EC%97%85.html): 39개 업종 중 22개 인허가 대상
+- [인적용역](https://biz.richntax.com/guide/%EC%9D%B8%EC%A0%81%EC%9A%A9%EC%97%AD.html): 39개 업종 중 5개 인허가 대상
+- [섬유제품 제조업: 의복 제외](https://biz.richntax.com/guide/%EC%84%AC%EC%9C%A0%EC%A0%9C%ED%92%88-%EC%A0%9C%EC%A1%B0%EC%97%85-%EC%9D%98%EB%B3%B5-%EC%A0%9C%EC%99%B8.html): 35개 업종 중 0개 인허가 대상
+- [전문직별 공사업](https://biz.richntax.com/guide/%EC%A0%84%EB%AC%B8%EC%A7%81%EB%B3%84-%EA%B3%B5%EC%82%AC%EC%97%85.html): 35개 업종 중 33개 인허가 대상
+- [육상 운송 및 파이프라인 운송업](https://biz.richntax.com/guide/%EC%9C%A1%EC%83%81-%EC%9A%B4%EC%86%A1-%EB%B0%8F-%ED%8C%8C%EC%9D%B4%ED%94%84%EB%9D%BC%EC%9D%B8-%EC%9A%B4%EC%86%A1%EC%97%85.html): 34개 업종 중 27개 인허가 대상
+- [부동산업](https://biz.richntax.com/guide/%EB%B6%80%EB%8F%99%EC%82%B0%EC%97%85.html): 34개 업종 중 17개 인허가 대상
+- [음식점 및 주점업](https://biz.richntax.com/guide/%EC%9D%8C%EC%8B%9D%EC%A0%90-%EB%B0%8F-%EC%A3%BC%EC%A0%90%EC%97%85.html): 33개 업종 중 32개 인허가 대상
+- [전자 부품, 컴퓨터, 영상, 음향 및 통신장비 제조업](https://biz.richntax.com/guide/%EC%A0%84%EC%9E%90-%EB%B6%80%ED%92%88-%EC%BB%B4%ED%93%A8%ED%84%B0-%EC%98%81%EC%83%81-%EC%9D%8C%ED%96%A5-%EB%B0%8F-%ED%86%B5%EC%8B%A0%EC%9E%A5%EB%B9%84-%EC%A0%9C%EC%A1%B0%EC%97%85.html): 31개 업종 중 0개 인허가 대상
+- [1차 금속 제조업](https://biz.richntax.com/guide/1%EC%B0%A8-%EA%B8%88%EC%86%8D-%EC%A0%9C%EC%A1%B0%EC%97%85.html): 30개 업종 중 0개 인허가 대상
+- [기타 제품 제조업](https://biz.richntax.com/guide/%EA%B8%B0%ED%83%80-%EC%A0%9C%ED%92%88-%EC%A0%9C%EC%A1%B0%EC%97%85.html): 30개 업종 중 9개 인허가 대상
+- [보건업](https://biz.richntax.com/guide/%EB%B3%B4%EA%B1%B4%EC%97%85.html): 28개 업종 중 25개 인허가 대상
+- [창고 및 운송관련 서비스업](https://biz.richntax.com/guide/%EC%B0%BD%EA%B3%A0-%EB%B0%8F-%EC%9A%B4%EC%86%A1%EA%B4%80%EB%A0%A8-%EC%84%9C%EB%B9%84%EC%8A%A4%EC%97%85.html): 27개 업종 중 21개 인허가 대상
+- [전기장비 제조업](https://biz.richntax.com/guide/%EC%A0%84%EA%B8%B0%EC%9E%A5%EB%B9%84-%EC%A0%9C%EC%A1%B0%EC%97%85.html): 26개 업종 중 3개 인허가 대상
+- [고무 및 플라스틱제품 제조업](https://biz.richntax.com/guide/%EA%B3%A0%EB%AC%B4-%EB%B0%8F-%ED%94%8C%EB%9D%BC%EC%8A%A4%ED%8B%B1%EC%A0%9C%ED%92%88-%EC%A0%9C%EC%A1%B0%EC%97%85.html): 25개 업종 중 5개 인허가 대상
+- [교육 서비스업](https://biz.richntax.com/guide/%EA%B5%90%EC%9C%A1-%EC%84%9C%EB%B9%84%EC%8A%A4%EC%97%85.html): 25개 업종 중 19개 인허가 대상
+- [농업](https://biz.richntax.com/guide/%EB%86%8D%EC%97%85.html): 23개 업종 중 7개 인허가 대상
+- [기타 개인 서비스업](https://biz.richntax.com/guide/%EA%B8%B0%ED%83%80-%EA%B0%9C%EC%9D%B8-%EC%84%9C%EB%B9%84%EC%8A%A4%EC%97%85.html): 23개 업종 중 18개 인허가 대상
+- [전문 서비스업](https://biz.richntax.com/guide/%EC%A0%84%EB%AC%B8-%EC%84%9C%EB%B9%84%EC%8A%A4%EC%97%85.html): 22개 업종 중 14개 인허가 대상
+- [의복, 의복 액세서리 및 모피제품 제조업](https://biz.richntax.com/guide/%EC%9D%98%EB%B3%B5-%EC%9D%98%EB%B3%B5-%EC%95%A1%EC%84%B8%EC%84%9C%EB%A6%AC-%EB%B0%8F-%EB%AA%A8%ED%94%BC%EC%A0%9C%ED%92%88-%EC%A0%9C%EC%A1%B0%EC%97%85.html): 20개 업종 중 0개 인허가 대상
+- [의료, 정밀, 광학 기기 및 시계 제조업](https://biz.richntax.com/guide/%EC%9D%98%EB%A3%8C-%EC%A0%95%EB%B0%80-%EA%B4%91%ED%95%99-%EA%B8%B0%EA%B8%B0-%EB%B0%8F-%EC%8B%9C%EA%B3%84-%EC%A0%9C%EC%A1%B0%EC%97%85.html): 20개 업종 중 9개 인허가 대상
+- [자동차 및 부품 판매업](https://biz.richntax.com/guide/%EC%9E%90%EB%8F%99%EC%B0%A8-%EB%B0%8F-%EB%B6%80%ED%92%88-%ED%8C%90%EB%A7%A4%EC%97%85.html): 20개 업종 중 6개 인허가 대상
+- [펄프, 종이 및 종이제품 제조업](https://biz.richntax.com/guide/%ED%8E%84%ED%94%84-%EC%A2%85%EC%9D%B4-%EB%B0%8F-%EC%A2%85%EC%9D%B4%EC%A0%9C%ED%92%88-%EC%A0%9C%EC%A1%B0%EC%97%85.html): 19개 업종 중 11개 인허가 대상
+- [기타 운송장비 제조업](https://biz.richntax.com/guide/%EA%B8%B0%ED%83%80-%EC%9A%B4%EC%86%A1%EC%9E%A5%EB%B9%84-%EC%A0%9C%EC%A1%B0%EC%97%85.html): 17개 업종 중 0개 인허가 대상
+- [종합 건설업](https://biz.richntax.com/guide/%EC%A2%85%ED%95%A9-%EA%B1%B4%EC%84%A4%EC%97%85.html): 17개 업종 중 16개 인허가 대상
+- [임대업: 부동산 제외](https://biz.richntax.com/guide/%EC%9E%84%EB%8C%80%EC%97%85-%EB%B6%80%EB%8F%99%EC%82%B0-%EC%A0%9C%EC%99%B8.html): 16개 업종 중 6개 인허가 대상
+- [목재 및 나무제품 제조업: 가구 제외](https://biz.richntax.com/guide/%EB%AA%A9%EC%9E%AC-%EB%B0%8F-%EB%82%98%EB%AC%B4%EC%A0%9C%ED%92%88-%EC%A0%9C%EC%A1%B0%EC%97%85-%EA%B0%80%EA%B5%AC-%EC%A0%9C%EC%99%B8.html): 16개 업종 중 6개 인허가 대상
+- [사업 지원 서비스업](https://biz.richntax.com/guide/%EC%82%AC%EC%97%85-%EC%A7%80%EC%9B%90-%EC%84%9C%EB%B9%84%EC%8A%A4%EC%97%85.html): 16개 업종 중 2개 인허가 대상
+- [자동차 및 트레일러 제조업](https://biz.richntax.com/guide/%EC%9E%90%EB%8F%99%EC%B0%A8-%EB%B0%8F-%ED%8A%B8%EB%A0%88%EC%9D%BC%EB%9F%AC-%EC%A0%9C%EC%A1%B0%EC%97%85.html): 15개 업종 중 0개 인허가 대상
+- [금융업](https://biz.richntax.com/guide/%EA%B8%88%EC%9C%B5%EC%97%85.html): 15개 업종 중 6개 인허가 대상
+- [기타 전문, 과학 및 기술 서비스업](https://biz.richntax.com/guide/%EA%B8%B0%ED%83%80-%EC%A0%84%EB%AC%B8-%EA%B3%BC%ED%95%99-%EB%B0%8F-%EA%B8%B0%EC%88%A0-%EC%84%9C%EB%B9%84%EC%8A%A4%EC%97%85.html): 15개 업종 중 6개 인허가 대상
+- [창작, 예술 및 여가관련 서비스업](https://biz.richntax.com/guide/%EC%B0%BD%EC%9E%91-%EC%98%88%EC%88%A0-%EB%B0%8F-%EC%97%AC%EA%B0%80%EA%B4%80%EB%A0%A8-%EC%84%9C%EB%B9%84%EC%8A%A4%EC%97%85.html): 15개 업종 중 11개 인허가 대상
+- [건축 기술, 엔지니어링 및 기타 과학기술 서비스업](https://biz.richntax.com/guide/%EA%B1%B4%EC%B6%95-%EA%B8%B0%EC%88%A0-%EC%97%94%EC%A7%80%EB%8B%88%EC%96%B4%EB%A7%81-%EB%B0%8F-%EA%B8%B0%ED%83%80-%EA%B3%BC%ED%95%99%EA%B8%B0%EC%88%A0-%EC%84%9C%EB%B9%84%EC%8A%A4%EC%97%85.html): 14개 업종 중 13개 인허가 대상
+- [폐기물 수집, 운반, 처리 및 원료 재생업](https://biz.richntax.com/guide/%ED%8F%90%EA%B8%B0%EB%AC%BC-%EC%88%98%EC%A7%91-%EC%9A%B4%EB%B0%98-%EC%B2%98%EB%A6%AC-%EB%B0%8F-%EC%9B%90%EB%A3%8C-%EC%9E%AC%EC%83%9D%EC%97%85.html): 13개 업종 중 8개 인허가 대상
+- [비금속광물 광업: 연료용 제외](https://biz.richntax.com/guide/%EB%B9%84%EA%B8%88%EC%86%8D%EA%B4%91%EB%AC%BC-%EA%B4%91%EC%97%85-%EC%97%B0%EB%A3%8C%EC%9A%A9-%EC%A0%9C%EC%99%B8.html): 12개 업종 중 12개 인허가 대상
+- [출판업](https://biz.richntax.com/guide/%EC%B6%9C%ED%8C%90%EC%97%85.html): 12개 업종 중 10개 인허가 대상
+- [음료 제조업](https://biz.richntax.com/guide/%EC%9D%8C%EB%A3%8C-%EC%A0%9C%EC%A1%B0%EC%97%85.html): 11개 업종 중 11개 인허가 대상
+- [영상ㆍ오디오 기록물 제작 및 배급업](https://biz.richntax.com/guide/%EC%98%81%EC%83%81-%EC%98%A4%EB%94%94%EC%98%A4-%EA%B8%B0%EB%A1%9D%EB%AC%BC-%EC%A0%9C%EC%9E%91-%EB%B0%8F-%EB%B0%B0%EA%B8%89%EC%97%85.html): 11개 업종 중 4개 인허가 대상
+- [숙박업](https://biz.richntax.com/guide/%EC%88%99%EB%B0%95%EC%97%85.html): 11개 업종 중 10개 인허가 대상
+- [개인 및 소비용품 수리업](https://biz.richntax.com/guide/%EA%B0%9C%EC%9D%B8-%EB%B0%8F-%EC%86%8C%EB%B9%84%EC%9A%A9%ED%92%88-%EC%88%98%EB%A6%AC%EC%97%85.html): 11개 업종 중 2개 인허가 대상
+- [금융 및 보험관련 서비스업](https://biz.richntax.com/guide/%EA%B8%88%EC%9C%B5-%EB%B0%8F-%EB%B3%B4%ED%97%98%EA%B4%80%EB%A0%A8-%EC%84%9C%EB%B9%84%EC%8A%A4%EC%97%85.html): 10개 업종 중 8개 인허가 대상
+- [인쇄 및 기록매체 복제업](https://biz.richntax.com/guide/%EC%9D%B8%EC%87%84-%EB%B0%8F-%EA%B8%B0%EB%A1%9D%EB%A7%A4%EC%B2%B4-%EB%B3%B5%EC%A0%9C%EC%97%85.html): 9개 업종 중 8개 인허가 대상
+- [전기, 가스, 증기 및 공기 조절 공급업](https://biz.richntax.com/guide/%EC%A0%84%EA%B8%B0-%EA%B0%80%EC%8A%A4-%EC%A6%9D%EA%B8%B0-%EB%B0%8F-%EA%B3%B5%EA%B8%B0-%EC%A1%B0%EC%A0%88-%EA%B3%B5%EA%B8%89%EC%97%85.html): 9개 업종 중 9개 인허가 대상
+- [사업지원 서비스업](https://biz.richntax.com/guide/%EC%82%AC%EC%97%85%EC%A7%80%EC%9B%90-%EC%84%9C%EB%B9%84%EC%8A%A4%EC%97%85.html): 9개 업종 중 7개 인허가 대상
+- [연구개발업](https://biz.richntax.com/guide/%EC%97%B0%EA%B5%AC%EA%B0%9C%EB%B0%9C%EC%97%85.html): 9개 업종 중 0개 인허가 대상
+- [수상 운송업](https://biz.richntax.com/guide/%EC%88%98%EC%83%81-%EC%9A%B4%EC%86%A1%EC%97%85.html): 8개 업종 중 6개 인허가 대상
+- [보험업](https://biz.richntax.com/guide/%EB%B3%B4%ED%97%98%EC%97%85.html): 8개 업종 중 7개 인허가 대상
+- [어업](https://biz.richntax.com/guide/%EC%96%B4%EC%97%85.html): 7개 업종 중 7개 인허가 대상
+- [가죽, 가방 및 신발 제조업](https://biz.richntax.com/guide/%EA%B0%80%EC%A3%BD-%EA%B0%80%EB%B0%A9-%EB%B0%8F-%EC%8B%A0%EB%B0%9C-%EC%A0%9C%EC%A1%B0%EC%97%85.html): 7개 업종 중 1개 인허가 대상
+- [금속 광업](https://biz.richntax.com/guide/%EA%B8%88%EC%86%8D-%EA%B4%91%EC%97%85.html): 6개 업종 중 6개 인허가 대상
+- [의료용 물질 및 의약품 제조업](https://biz.richntax.com/guide/%EC%9D%98%EB%A3%8C%EC%9A%A9-%EB%AC%BC%EC%A7%88-%EB%B0%8F-%EC%9D%98%EC%95%BD%ED%92%88-%EC%A0%9C%EC%A1%B0%EC%97%85.html): 6개 업종 중 4개 인허가 대상
+- [가구 제조업](https://biz.richntax.com/guide/%EA%B0%80%EA%B5%AC-%EC%A0%9C%EC%A1%B0%EC%97%85.html): 6개 업종 중 0개 인허가 대상
+- [임업](https://biz.richntax.com/guide/%EC%9E%84%EC%97%85.html): 5개 업종 중 4개 인허가 대상
+- [코크스, 연탄 및 석유정제품 제조업](https://biz.richntax.com/guide/%EC%BD%94%ED%81%AC%EC%8A%A4-%EC%97%B0%ED%83%84-%EB%B0%8F-%EC%84%9D%EC%9C%A0%EC%A0%95%EC%A0%9C%ED%92%88-%EC%A0%9C%EC%A1%B0%EC%97%85.html): 5개 업종 중 4개 인허가 대상
+- [우편 및 통신업](https://biz.richntax.com/guide/%EC%9A%B0%ED%8E%B8-%EB%B0%8F-%ED%86%B5%EC%8B%A0%EC%97%85.html): 5개 업종 중 5개 인허가 대상
+- [사업시설 관리 및 조경 서비스업](https://biz.richntax.com/guide/%EC%82%AC%EC%97%85%EC%8B%9C%EC%84%A4-%EA%B4%80%EB%A6%AC-%EB%B0%8F-%EC%A1%B0%EA%B2%BD-%EC%84%9C%EB%B9%84%EC%8A%A4%EC%97%85.html): 5개 업종 중 3개 인허가 대상
+- [하수, 폐수 및 분뇨 처리업](https://biz.richntax.com/guide/%ED%95%98%EC%88%98-%ED%8F%90%EC%88%98-%EB%B0%8F-%EB%B6%84%EB%87%A8-%EC%B2%98%EB%A6%AC%EC%97%85.html): 5개 업종 중 3개 인허가 대상
+- [방송 및 영상·오디오물 제공 서비스업](https://biz.richntax.com/guide/%EB%B0%A9%EC%86%A1-%EB%B0%8F-%EC%98%81%EC%83%81-%EC%98%A4%EB%94%94%EC%98%A4%EB%AC%BC-%EC%A0%9C%EA%B3%B5-%EC%84%9C%EB%B9%84%EC%8A%A4%EC%97%85.html): 5개 업종 중 4개 인허가 대상
+- [정보서비스업](https://biz.richntax.com/guide/%EC%A0%95%EB%B3%B4%EC%84%9C%EB%B9%84%EC%8A%A4%EC%97%85.html): 4개 업종 중 2개 인허가 대상
+- [컴퓨터 프로그래밍, 시스템 통합 및 관리업](https://biz.richntax.com/guide/%EC%BB%B4%ED%93%A8%ED%84%B0-%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%B0%8D-%EC%8B%9C%EC%8A%A4%ED%85%9C-%ED%86%B5%ED%95%A9-%EB%B0%8F-%EA%B4%80%EB%A6%AC%EC%97%85.html): 4개 업종 중 0개 인허가 대상
+- [석탄, 원유 및 천연가스 광업](https://biz.richntax.com/guide/%EC%84%9D%ED%83%84-%EC%9B%90%EC%9C%A0-%EB%B0%8F-%EC%B2%9C%EC%97%B0%EA%B0%80%EC%8A%A4-%EA%B4%91%EC%97%85.html): 3개 업종 중 3개 인허가 대상
+- [공공 행정, 국방 및 사회보장 행정](https://biz.richntax.com/guide/%EA%B3%B5%EA%B3%B5-%ED%96%89%EC%A0%95-%EA%B5%AD%EB%B0%A9-%EB%B0%8F-%EC%82%AC%ED%9A%8C%EB%B3%B4%EC%9E%A5-%ED%96%89%EC%A0%95.html): 3개 업종 중 3개 인허가 대상
+- [산업용 기계 및 장비 수리업](https://biz.richntax.com/guide/%EC%82%B0%EC%97%85%EC%9A%A9-%EA%B8%B0%EA%B3%84-%EB%B0%8F-%EC%9E%A5%EB%B9%84-%EC%88%98%EB%A6%AC%EC%97%85.html): 3개 업종 중 1개 인허가 대상
+- [환경 정화 및 복원업](https://biz.richntax.com/guide/%ED%99%98%EA%B2%BD-%EC%A0%95%ED%99%94-%EB%B0%8F-%EB%B3%B5%EC%9B%90%EC%97%85.html): 2개 업종 중 2개 인허가 대상
+- [수도업](https://biz.richntax.com/guide/%EC%88%98%EB%8F%84%EC%97%85.html): 2개 업종 중 2개 인허가 대상
+- [항공 운송업](https://biz.richntax.com/guide/%ED%95%AD%EA%B3%B5-%EC%9A%B4%EC%86%A1%EC%97%85.html): 2개 업종 중 2개 인허가 대상
+- [방송 및 영상·오디오물 제공 서비스업, 정보서비스업](https://biz.richntax.com/guide/%EB%B0%A9%EC%86%A1-%EB%B0%8F-%EC%98%81%EC%83%81-%EC%98%A4%EB%94%94%EC%98%A4%EB%AC%BC-%EC%A0%9C%EA%B3%B5-%EC%84%9C%EB%B9%84%EC%8A%A4%EC%97%85-%EC%A0%95%EB%B3%B4%EC%84%9C%EB%B9%84%EC%8A%A4%EC%97%85.html): 2개 업종 중 1개 인허가 대상
+- [사회복지 서비스업](https://biz.richntax.com/guide/%EC%82%AC%ED%9A%8C%EB%B3%B5%EC%A7%80-%EC%84%9C%EB%B9%84%EC%8A%A4%EC%97%85.html): 2개 업종 중 0개 인허가 대상
+- [광업 지원 서비스업](https://biz.richntax.com/guide/%EA%B4%91%EC%97%85-%EC%A7%80%EC%9B%90-%EC%84%9C%EB%B9%84%EC%8A%A4%EC%97%85.html): 1개 업종 중 1개 인허가 대상
+- [담배 제조업](https://biz.richntax.com/guide/%EB%8B%B4%EB%B0%B0-%EC%A0%9C%EC%A1%B0%EC%97%85.html): 1개 업종 중 1개 인허가 대상
+- [화학 물질 및 화학제품 제조업:의약품 제외 의료용 물질 및 의약품 제조업](https://biz.richntax.com/guide/%ED%99%94%ED%95%99-%EB%AC%BC%EC%A7%88-%EB%B0%8F-%ED%99%94%ED%95%99%EC%A0%9C%ED%92%88-%EC%A0%9C%EC%A1%B0%EC%97%85-%EC%9D%98%EC%95%BD%ED%92%88-%EC%A0%9C%EC%99%B8-%EC%9D%98%EB%A3%8C%EC%9A%A9-%EB%AC%BC%EC%A7%88-%EB%B0%8F-%EC%9D%98%EC%95%BD%ED%92%88-%EC%A0%9C%EC%A1%B0%EC%97%85.html): 1개 업종 중 0개 인허가 대상
+- [가구 내 고용활동](https://biz.richntax.com/guide/%EA%B0%80%EA%B5%AC-%EB%82%B4-%EA%B3%A0%EC%9A%A9%ED%99%9C%EB%8F%99.html): 1개 업종 중 0개 인허가 대상
+
+## 참고
+본 정보는 참고용이며, 인·허가 요건은 법령 개정·지자체 조례에 따라 달라질 수 있습니다. 사업자등록·영업 개시 전 관할기관(시·군·구청 등) 확인이 필요합니다.
