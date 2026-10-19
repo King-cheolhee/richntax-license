@@ -1103,6 +1103,84 @@ section.evb, section.evb *{
 .ev-foot{font-weight:400;}
 
 </style>
+<style id="motion-css">
+/* ═══════ v9 모션 레이어 (스크롤 등장 · 숫자 카운트업 · 단계 진행) ═══════
+   - JS가 <html>에 .mo 클래스를 붙였을 때만 숨김 상태가 적용됩니다(JS 미작동 시 정적 화면 그대로).
+   - 모션 줄이기 설정 사용자와 인쇄 시에는 모두 정적으로 표시합니다. */
+.mo [data-mo]{
+  opacity:0;transform:translate3d(0,28px,0);
+  transition:opacity .7s cubic-bezier(.2,.7,.2,1),transform .8s cubic-bezier(.2,.7,.2,1);
+  transition-delay:var(--d,0ms);will-change:opacity,transform;
+}
+.mo [data-mo="left"]{transform:translate3d(-36px,0,0);}
+.mo [data-mo="right"]{transform:translate3d(36px,0,0);}
+.mo [data-mo="pop"]{transform:scale(.86);}
+.mo [data-mo="drop"]{transform:translate3d(0,-26px,0) scale(.96);}
+.mo [data-mo].in{opacity:1;transform:none;}
+/* 자체 위치 transform이 있는 라벨은 투명도만 */
+.mo [data-mf]{opacity:0;transition:opacity .6s ease;transition-delay:var(--d,0ms);}
+.mo [data-mf].in{opacity:1;}
+
+/* 헤드라인 강조어 밑줄 스윕 */
+.mo .head .pt{
+  background-image:linear-gradient(rgba(26,86,219,.16),rgba(26,86,219,.16));
+  background-repeat:no-repeat;background-position:0 88%;background-size:0 .34em;
+  -webkit-box-decoration-break:clone;box-decoration-break:clone;
+  transition:background-size 1s cubic-bezier(.65,0,.35,1) .45s;
+}
+.mo .head.in .pt{background-size:100% .34em;}
+
+/* 검토 5단계 · 연결선이 그려지며 다음 단계로 */
+.mo .rlink .bar{transform:scaleY(0);transform-origin:top;transition:transform .5s ease-out;}
+.mo .rlink .tip{opacity:0;transform:translateY(-6px);transition:opacity .3s ease .4s,transform .3s ease .4s;}
+.mo .rlink.in .bar{transform:none;background:var(--point);}
+.mo .rlink.in .tip{opacity:1;transform:none;border-top-color:var(--point);}
+.mo .rstep .badge{transform:scale(.4);opacity:0;transition:transform .55s cubic-bezier(.34,1.56,.64,1) .25s,opacity .3s ease .25s;}
+.mo .rstep.in .badge{transform:none;opacity:1;animation:mo-ring 1.6s ease-out .7s 1;}
+@keyframes mo-ring{0%{box-shadow:0 0 0 0 rgba(26,86,219,.45);}100%{box-shadow:0 0 0 18px rgba(26,86,219,0);}}
+.mo .rstep dd.out::before{transform:scale(0);transition:transform .4s cubic-bezier(.34,1.56,.64,1) .8s;}
+.mo .rstep.in dd.out::before{transform:none;}
+
+/* 검토 히어로 라벨 · 반려 라벨 맥박 */
+.mo .m4-hero.in .ghc{animation:mo-pulse 2.4s ease-in-out 1.6s infinite;}
+@keyframes mo-pulse{0%,100%{box-shadow:0 4px 14px rgba(120,20,12,.24),0 0 0 0 rgba(194,38,27,.35);}50%{box-shadow:0 4px 14px rgba(120,20,12,.24),0 0 0 12px rgba(194,38,27,0);}}
+
+/* 칸반 · 현재 단계 표시가 왼쪽에서 오른쪽으로 진행 */
+.mo .kanban .klab{transition:background .45s ease,color .45s ease,box-shadow .45s ease,transform .45s cubic-bezier(.34,1.56,.64,1);}
+.mo .kanban.run .klab{background:#fff;color:var(--point);box-shadow:inset 0 0 0 1.5px var(--point);}
+.mo .kanban.run .klab::after{border-top-color:transparent;}
+.mo .kanban.run .klab.on{background:var(--point);color:#fff;box-shadow:0 6px 16px rgba(26,86,219,.32);}
+.mo .kanban.run .klab.on::after{border-top-color:var(--point);}
+.mo .kanban.run .klab.cur{transform:translateX(-50%) translateY(-4px) scale(1.06);}
+
+/* 지원사업 알림 · 푸시 알림처럼 위에서 내려옴 */
+.mo .phone .nc[data-mo]{transform:translate3d(0,-22px,0) scale(.97);transition-duration:.6s,.7s;}
+.mo .phone .nc.in{transform:none;}
+.mo .phone .nc.in .nc-meta .d{animation:mo-blink 1.4s ease-in-out .8s 2;}
+@keyframes mo-blink{50%{background:#FFD9CC;}}
+
+/* 업무범위 체크 표시가 그려짐 */
+.mo .scope .sc.in .ic path{stroke-dasharray:24;stroke-dashoffset:24;animation:mo-draw .5s ease-out forwards;animation-delay:var(--d,0ms);}
+@keyframes mo-draw{to{stroke-dashoffset:0;}}
+
+/* 채널 아이콘 */
+.mo .chans .ch.in svg{animation:mo-hop .6s cubic-bezier(.34,1.56,.64,1) var(--d,0ms) 1 both;}
+@keyframes mo-hop{0%{transform:scale(.6);}60%{transform:scale(1.12);}100%{transform:none;}}
+
+/* 숫자 카운트업 중 폭 흔들림 방지 */
+.mo [data-count]{font-variant-numeric:tabular-nums;}
+
+@media (prefers-reduced-motion: reduce){
+  .mo [data-mo],.mo [data-mf],.mo .rlink .bar,.mo .rlink .tip,.mo .rstep .badge,.mo .rstep dd.out::before{opacity:1!important;transform:none!important;transition:none!important;animation:none!important;}
+  .mo .head .pt{background-size:100% .34em;transition:none;}
+  .mo *{animation:none!important;}
+}
+@media print{
+  .mo [data-mo],.mo .rlink .bar,.mo .rlink .tip,.mo .rstep .badge{opacity:1!important;transform:none!important;}
+  .mo [data-mf]{opacity:1!important;}
+}
+</style>
+<script>(function(d){if(window.matchMedia&&matchMedia('(prefers-reduced-motion: reduce)').matches)return;d.classList.add('mo');setTimeout(function(){if(!window.__moReady)d.classList.remove('mo');},3000);})(document.documentElement);</script>
 </head>
 <body>
 
@@ -1821,5 +1899,136 @@ section.evb, section.evb *{
 
 </div>
 
+<script id="motion-js">
+(function(){
+  var root=document.documentElement;
+  if(!root.classList.contains('mo')) return;
+  if(!('IntersectionObserver' in window)){root.classList.remove('mo');return;}
+  window.__moReady=true;
+
+  function $$(sel,ctx){return Array.prototype.slice.call((ctx||document).querySelectorAll(sel));}
+  function tag(el,kind,delay){
+    if(!el||el.hasAttribute('data-mo')||el.hasAttribute('data-mf')) return;
+    if(kind==='fade') el.setAttribute('data-mf','');
+    else el.setAttribute('data-mo',kind||'');
+    if(delay) el.style.setProperty('--d',delay+'ms');
+  }
+  function stagger(sel,kind,step,base){
+    $$(sel).forEach(function(group){
+      $$(':scope > *',group).forEach(function(el,i){tag(el,kind,(base||0)+i*(step||90));});
+    });
+  }
+
+  /* 1) 섹션 머리: 작은 제목 → 큰 제목 → 설명 순서로 */
+  $$('section').forEach(function(sec){
+    tag(sec.querySelector(':scope > .eyebrow'),'',0);
+    tag(sec.querySelector(':scope > .head'),'',110);
+    tag(sec.querySelector(':scope > .lede'),'',220);
+  });
+
+  /* 2) 일반 블록 */
+  ['.cei','.cei-lead','.cei-blue','.evidence','.m4-hero','.m4-hero-cap','.spec','.shot','.shot-cap',
+   '.kanban','.vs-note','.note','.explain','.caution','.warn','.phone-stage','.ph-more','.repfan',
+   '.scope-foot','.fb-anchor','.docshot','.doc-cap','.doc-sub','.fee-foot','.final-note','.m4-bridge','.im-fn'
+  ].forEach(function(s){$$(s).forEach(function(el){tag(el,'');});});
+
+  /* 3) 순차 등장 묶음 */
+  stagger('.unum','',140);
+  stagger('.spec2','',140);
+  stagger('.pts','',90);
+  stagger('.im-l','left',120);
+  stagger('.trio','',120);
+  stagger('.people','pop',80);
+  stagger('.ql','',100);
+  stagger('.scope','',160);
+  stagger('.crit','pop',70);
+  stagger('.chans','pop',110);
+  $$('.vs .col.a').forEach(function(el){tag(el,'left',0);});
+  $$('.vs .col.b').forEach(function(el){tag(el,'right',160);});
+  $$('.fb-l').forEach(function(el){tag(el,'left',0);});
+  $$('.fb-r').forEach(function(el){tag(el,'right',140);});
+  $$('.phone .nc').forEach(function(el,i){tag(el,'drop',250+i*380);});
+  $$('.scope .sc').forEach(function(sc){$$('li .ic path',sc).forEach(function(p,i){p.style.setProperty('--d',(300+i*90)+'ms');});});
+  $$('.chans .ch').forEach(function(ch,i){var s=ch.querySelector('svg');if(s)s.style.setProperty('--d',(i*110+120)+'ms');});
+
+  /* 검토 5단계: 카드와 연결선이 하나씩 이어짐 */
+  $$('.rstep').forEach(function(el,i){tag(el,i%2?'right':'left',0);});
+  /* 검토 히어로 라벨: 시작 → 반려 → 끝 */
+  $$('.m4-hero .ghl').forEach(function(el){tag(el,'fade',450);});
+  $$('.m4-hero .ghc').forEach(function(el){tag(el,'fade',900);});
+  $$('.m4-hero .ghr').forEach(function(el){tag(el,'fade',1350);});
+  $$('.repfan .rlab').forEach(function(el,i){tag(el,'fade',400+i*220);});
+  $$('.kanban .kdir').forEach(function(el){tag(el,'fade',600);});
+
+  /* 4) 숫자 카운트업 */
+  var counters=[];
+  $$('.unum .n, .spec .num, .spec2 .num, .fb-num').forEach(function(el){
+    var walker=document.createTreeWalker(el,NodeFilter.SHOW_TEXT,null),node;
+    while((node=walker.nextNode())){
+      var m=node.nodeValue.match(/^(\D*)([\d,]+)(\D*)$/);
+      if(m&&m[2].replace(/,/g,'').length){
+        var target=parseInt(m[2].replace(/,/g,''),10);
+        if(target>0){
+          el.setAttribute('data-count','');
+          counters.push({el:el,node:node,pre:m[1],post:m[3],target:target,comma:m[2].indexOf(',')>-1,done:false});
+          node.nodeValue=m[1]+'0'+m[3];
+        }
+        break;
+      }
+    }
+  });
+  function fmt(n,comma){return comma?n.toLocaleString('ko-KR'):String(n);}
+  function runCount(c){
+    if(c.done) return; c.done=true;
+    var dur=c.target>999?1600:900,t0=null;
+    function f(ts){
+      if(t0===null) t0=ts;
+      var p=Math.min(1,(ts-t0)/dur),e=1-Math.pow(1-p,3);
+      c.node.nodeValue=c.pre+fmt(Math.round(c.target*e),c.comma)+c.post;
+      if(p<1) requestAnimationFrame(f);
+    }
+    setTimeout(function(){requestAnimationFrame(f);},250);
+  }
+
+  /* 5) 등장 감지 */
+  var io=new IntersectionObserver(function(entries){
+    entries.forEach(function(en){
+      if(!en.isIntersecting) return;
+      var el=en.target;
+      el.classList.add('in');
+      io.unobserve(el);
+      counters.forEach(function(c){if(c.el===el||el.contains(c.el)) runCount(c);});
+    });
+  },{rootMargin:'0px 0px -10% 0px',threshold:0});
+  $$('[data-mo],[data-mf],.rlink,.m4-hero').forEach(function(el){io.observe(el);});
+  counters.forEach(function(c){if(!c.el.closest('[data-mo]')) io.observe(c.el);});
+  $$('.rstep').forEach(function(el){io.observe(el);});
+
+  /* 6) 칸반: 현재 단계 표시가 검토요청 → 신고완료로 진행(화면에 보일 때만) */
+  $$('.kanban').forEach(function(kb){
+    var labs=$$('.klab',kb); if(labs.length<2) return;
+    var i=-1,timer=null,holding=false;
+    function step(){
+      i++;
+      if(i>=labs.length){
+        clearInterval(timer);timer=null;holding=true;
+        setTimeout(function(){
+          labs.forEach(function(l){l.classList.remove('on','cur');});
+          i=-1;holding=false; if(kb.__vis) timer=setInterval(step,850);
+        },1800);
+        return;
+      }
+      labs.forEach(function(l,k){l.classList.toggle('on',k<=i);l.classList.toggle('cur',k===i);});
+    }
+    new IntersectionObserver(function(es){
+      es.forEach(function(e){
+        kb.__vis=e.isIntersecting;
+        if(e.isIntersecting){kb.classList.add('run');if(!timer&&!holding) timer=setInterval(step,850);}
+        else if(timer){clearInterval(timer);timer=null;}
+      });
+    },{threshold:.35}).observe(kb);
+  });
+})();
+</script>
 </body>
 </html>
